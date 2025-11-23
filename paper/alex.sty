@@ -1,0 +1,96 @@
+%\usepackage{amsthm}
+%\makeatletter
+%\def\th@plain{%
+%  \thm@notefont{}% same as heading font
+%  \itshape % body font
+%}
+%\def\th@definition{%
+%  \thm@notefont{}% same as heading font
+%  \normalfont % body font
+%}
+%\makeatother
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}
+
+%\theoremstyle{definition}
+%\newtheorem{remark}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ams tools
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{amsthm}
+
+\usepackage{mdwlist}
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% theorem and friends
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{theorem}
+%\newcommand{\BlackBox}{\rule{1.5ex}{1.5ex}}  % end of proof
+%\newenvironment{proof}{\par\noindent{\bf Proof\ }}{\hfill\BlackBox\\[2mm]}
+% \newtheorem*{proof}{Proof}
+\newcommand{\BlackBox}{\rule{1.5ex}{1.5ex}}  % end of proof
+\newenvironment{proof}{\par\noindent{\bf Proof\ }}{\hfill\BlackBox\\[2mm]}
+%\newtheorem{proof}{Proof}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{corollary}{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{axiom}{Axiom}
+\newtheorem{definition}{Definition}
+
+% References for figures, tables, equations, and sections
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\eqnref}[1]{Equation~\eqref{eq:#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\prgref}[1]{Program~\ref{#1}}
+\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+\newcommand{\clmref}[1]{Claim~\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\ptyref}[1]{Property~\ref{#1}}
+\newcommand{\propref}[1]{Proposition~\ref{#1}}
+\newcommand{\defref}[1]{Definition~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+
+%%%%
+%
+%%%%
+\definecolor{color_0}{rgb}{0.2980392156862745,0.4470588235294118,0.6901960784313725}
+\definecolor{color_1}{rgb}{0.8666666666666667,0.5176470588235295,0.3215686274509804}
+\definecolor{color_2}{rgb}{0.3333333333333333,0.6588235294117647,0.40784313725490196}
+\definecolor{color_3}{rgb}{0.7686274509803922,0.3058823529411765,0.3215686274509804}
+\definecolor{color_4}{rgb}{0.5058823529411764,0.4470588235294118,0.7019607843137254}
+\definecolor{color_5}{rgb}{0.5764705882352941,0.47058823529411764,0.3764705882352941}
+\definecolor{color_6}{rgb}{0.8549019607843137,0.5450980392156862,0.7647058823529411}
+\definecolor{color_7}{rgb}{0.5490196078431373,0.5490196078431373,0.5490196078431373}
+\definecolor{color_8}{rgb}{0.8,0.7254901960784313,0.4549019607843137}
+\definecolor{color_9}{rgb}{0.39215686274509803,0.7098039215686275,0.803921568627451}
+\definecolor{color_alg}{rgb}{0.128125, 0.15546875, 0.8703125}
+\definecolor{firebrick}{rgb}{0.7, 0.13, 0.13}
+
+\newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\rbr}[1]{\left(#1\right)}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
+\newcommand{\nbr}[1]{\left\|#1\right\|}
+\newcommand{\abr}[1]{\left|#1\right|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\def \E {\mathbb{E}}
+
+%% add line
+\DeclareRobustCommand\mytikzdot{\tikz\draw[firebrick, line width=1.1mm] (0,0) -- (0.5,0);}

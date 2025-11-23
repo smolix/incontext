@@ -1,0 +1,76 @@
+## Core LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+## Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Build tool directories
+_minted*
+svg-inkscape/
+
+## Auxiliary and intermediate files from other packages
+*.nav
+*.snm
+*.vrb
+
+## Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+.venv
+
+## Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+## IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Data files (optional - uncomment if needed)
+# *.csv
+# *.h5
+# *.pkl
