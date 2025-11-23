@@ -30,25 +30,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{amsthm}
+% amsthm removed - alex.sty uses theorem package instead
+\usepackage{alex}
 
 
 % if you use cleveref..
 \usepackage[capitalize,noabbrev]{cleveref}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% THEOREMS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{assumption}[theorem]{Assumption}
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+% THEOREMS are defined in alex.sty
 
 % Todonotes is useful during development; simply uncomment the next line
 %    and comment out the line below the next line to turn off comments
@@ -383,20 +372,6 @@ column with a horizontal rule of 0.8~inches.\footnote{Multiple footnotes can
   appear in each column, in the same order as they appear in the text,
   but spread them across columns and pages if possible.}
 
-\begin{figure}[ht]
-  \vskip 0.2in
-  \begin{center}
-    \centerline{\includegraphics[width=\columnwidth]{icml_numpapers}}
-    \caption{
-      Historical locations and number of accepted papers for International
-      Machine Learning Conferences (ICML 1993 -- ICML 2008) and International
-      Workshops on Machine Learning (ML 1988 -- ML 1992). At the time this
-      figure was produced, the number of accepted papers for ICML 2008 was
-      unknown and instead estimated.
-    }
-    \label{icml-historical}
-  \end{center}
-\end{figure}
 
 \subsection{Figures}
 
@@ -621,7 +596,7 @@ for ethics review.
 % references without citing it in the main text, use \nocite
 \nocite{langley00}
 
-\bibliography{example_paper}
+\bibliography{bibfile}
 \bibliographystyle{icml2026}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
