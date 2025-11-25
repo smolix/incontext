@@ -208,6 +208,22 @@ We now need to expand our reasoning to nontrivial datastructures. IID doesn't ma
   \item Definitely good rates for Set Transformer models. Ideally let's download models from Huggingface and test it out. 
 \end{itemize}
 
+\section{Function Classes}
+\label{sec:fun}
+
+Given that all of these sequence models are just there to predict what happens next, we can look at the various memory compression and approximation strategies from a fresh point of view:
+
+\begin{itemize}
+  \item Grouped Query Attention --- basically just approximates larger groups of (key,value) sets as a single key and value. This works if shorter context doesn't matter that much at a distance. Reference He He's PhD work for this. 
+  \item Low-dimensional Approximation --- this is one of the tricks from one of the DeepSeek papers. They run attention lower-dimensional. Again, this works as an approximation. 
+  \item Retain (key,value) cache even though you swapped the model. E.g.\ this is used in ServiceNow Pipelined RL / Olmo 3. 
+  \item Compress long-range content (rather than all groups). This is the NSA paper. 
+  \item Compress long range overall --- Look up Steffi Jegelka's paper on using the Blelloch sum for long history. 
+  \item Most extreme case is RAG. 
+  \item Multi-edit and condense for kNN. Maybe we can recycle this here: https://cgm.cs.mcgill.ca/~godfried/teaching/pr-notes/dasarathy.pdf (the paper is quite soft tissue). 
+  \item Can we design a hierarchical clustering / aggregation algorithm for the history? This should make lookups a lot cheaper (compressed prefill). 
+\end{itemize}
+
 
 % Acknowledgements should only appear in the accepted version.
 \section*{Acknowledgements}
